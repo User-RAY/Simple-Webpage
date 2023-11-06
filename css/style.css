@@ -1,0 +1,192 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: black;
+	color: white;
+}
+
+
+#head{
+	
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#head::before{
+	content: '';
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../image/tech.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	z-index: -1;
+	transition: all 500ms;
+	opacity: 0.7;
+}
+
+
+
+#head:hover::before{
+	 filter: blur(0px);
+	-webkit-filter: blur(0px);
+}
+
+
+/*#head:hover #title{
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+}
+*/
+
+#title{
+	text-align: center;
+	color: white;
+}
+
+
+#logo{
+	width: 100px;
+	height: auto;
+	/*padding-bottom: 1em;*/
+	margin-bottom: 1.5em;
+}
+
+#title p{
+	margin: auto;
+	padding-top: 1em;
+	max-width: 30vh;
+}
+
+
+
+.service h3{
+	padding: 1em 0;
+}
+
+
+.container{
+	width: 90%;
+	margin: auto;
+	padding: 4em;
+	text-align: center;
+}
+
+
+
+.grid-3{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2em;
+}
+
+.grid-2{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2em;
+}
+
+.about{
+	background: #fffffff7;
+	color: black;
+}
+
+.about h3{
+	padding-bottom: 1em;
+}
+
+.grid-2 div{
+	align-self: center;
+}
+
+footer{
+	background: #333;
+}
+
+
+
+@media(max-width: 560px){
+
+	#head::before{
+		height: 50vh;
+	}
+
+	#head{
+		min-height: 50vh;
+	}
+
+
+	#logo {
+    width: 70px;
+    height: auto;
+    margin-bottom: 1.5em;
+}
+
+	.container{
+		width: 100%;
+		padding: 0;
+	}
+
+	.container p{
+		width: 80%;
+		margin: auto;
+		padding: 0;
+	}	
+
+	#title p{
+		display: none;
+	}
+
+	#title h1{
+		margin: 0 1em;
+		font-size: 1.8em;
+	}
+
+	.grid-3, .grid-2{
+	grid-template-columns: 1fr;
+	grid-gap: 0;
+	}
+
+	.grid-3 div{
+		padding: 2em 0;
+		border-bottom: 1px solid white;
+	}
+
+
+	.grid-2 {
+		padding: 2em 0;
+	}
+
+	footer{
+		padding: 2em;
+	}
+
+}
+
+
+
+@media(max-height: 500px){
+
+	#title h1, #title p{
+		display: none;
+	}
+
+}
+
+
+
+
+
+
+
+
